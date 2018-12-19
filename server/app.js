@@ -23,7 +23,7 @@ app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 // Enable the http request logger
 app.use(logger("dev"));
-// Enable json responses
+// Accept json requests
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 // Enable cookie parser
