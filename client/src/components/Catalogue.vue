@@ -1,8 +1,8 @@
 <template>
   <div class="catalogue">
-    <h1>SAI Global Greenfields Channel</h1>
+    <h1>Greenfields Channel</h1>
     <p>Please select a product from our catalogue.</p>
-    <h3>{{title}}</h3>
+    <h3>Catalogue</h3>
     <ul>
       <li v-for="product in products" :key="product.id">
         <a
@@ -39,8 +39,6 @@ export default {
     const response = await fetch("http://localhost:3000/products");
     // Parse the json object
     const products = await response.json();
-    // Log to console for demonstration purposes
-    console.log(products);
     // Update our local `state`
     this.products = products;
   }
