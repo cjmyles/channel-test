@@ -19,3 +19,13 @@ $ cd server
 $ npm i
 $ npm start
 ```
+
+# Test
+
+## Server
+
+Run the following command from the `server` directory.
+
+```sh
+$ npm run test
+```
