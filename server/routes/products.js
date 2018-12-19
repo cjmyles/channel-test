@@ -21,6 +21,7 @@ router.get("/", (req, res, next) => {
 
 /* Update (PUT) product. */
 router.put("/:id", (req, res, next) => {
+  // Find the product that matches the provided id and update it
   products = products.map(product =>
     product.id === req.params.id ? req.body : product
   );
@@ -29,6 +30,7 @@ router.put("/:id", (req, res, next) => {
 
 /* Delete (DELETE) product. */
 router.delete("/:id", (req, res, next) => {
+  // Filter products that don't match the provided id
   products = products.filter(product => product.id !== req.params.id);
   res.send(products);
 });
